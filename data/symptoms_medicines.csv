@@ -2,3 +2,4 @@ fever,cough,headache,fatigue,disease,medicine
 1,1,0,0,Flu,Tamiflu
 1,0,1,0,Migraine,Sumatriptan
 0,1,0,1,Common Cold,Paracetamol
+1,1,1,0,Dengue,Paracetamol
