@@ -1,0 +1,19 @@
+name: Auto-Retrain Medicine Model
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'data/**' ]
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: pip install -r app/requirements.txt
+      - run: python model/train.py
+      - run: echo "Model updated! (In real project, deploy to cloud here)"
